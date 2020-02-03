@@ -12,12 +12,13 @@
 
 import re
 
+
 def remove(s):
     return re.sub(r'!+(?=[^!])', '', s)
 
 
 print(remove('Hi!'), 'Hi!')
-print(remove('Hi!!!'),'Hi!!!')
+print(remove('Hi!!!'), 'Hi!!!')
 print(remove('!Hi'), 'Hi')
 print(remove('!Hi!'), 'Hi!')
 print(remove('Hi! Hi!'), 'Hi Hi!')
