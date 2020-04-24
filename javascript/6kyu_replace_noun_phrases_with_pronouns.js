@@ -41,7 +41,7 @@ function replaceNounPhrases(sentence, pronouns, dictionary) {
 
   const regex = new RegExp(`(?:${aux.join('|')}) (?:(?:${adj.join('|')}) )*(${nouns.join('|')})`, 'g');
 
-  return sentence.replace(regex, m => pronouns.shift());
+  return sentence.replace(regex, () => pronouns.shift());
 }
 
 const DICTIONARY = {
